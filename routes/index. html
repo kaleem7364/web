@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أداة فحص أسعار الأسهم</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* تنسيقات إضافية للواجهة العربية */
+        body {
+            font-family: 'Tahoma', Arial, sans-serif;
+        }
+        .stock-input {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 أداة فحص أسعار الأسهم</h1>
+            <p>ادخل رمز السهم (مثال: AAPL, MSFT, GOOG)</p>
+        </header>
+
+        <main>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="single">سهم واحد</button>
+                <button class="tab-btn" data-tab="compare">مقارنة سهمين</button>
+            </div>
+
+            <div class="tab-content active" id="single-tab">
+                <form id="singleStockForm">
+                    <div class="form-group">
+                        <label for="singleStock">رمز السهم:</label>
+                        <input type="text" id="singleStock" class="stock-input" placeholder="مثال: AAPL" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="likeStock">
+                        <label for="likeStock">إعجاب بهذا السهم</label>
+                    </div>
+                    <button type="submit">عرض السعر</button>
+                </form>
+                <div id="singleResult" class="result"></div>
+            </div>
+
+            <div class="tab-content" id="compare-tab">
+                <form id="compareStockForm">
+                    <div class="form-group">
+                        <label for="stock1">السهم الأول:</label>
+                        <input type="text" id="stock1" class="stock-input" placeholder="مثال: MSFT" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="stock2">السهم الثاني:</label>
+                        <input type="text" id="stock2" class="stock-input" placeholder="مثال: GOOG" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="likeBoth">
+                        <label for="likeBoth">إعجاب بالكل</label>
+                    </div>
+                    <button type="submit">مقارنة الأسهم</button>
+                </form>
+                <div id="compareResult" class="result"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>بيانات الأسهم مقدمة عبر واجهة freeCodeCamp</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
