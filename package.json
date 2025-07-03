@@ -1,0 +1,21 @@
+{
+  "name": "stock-price-checker",
+  "version": "1.0.0",
+  "description": "FreeCodeCamp Stock Price Checker Project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "NODE_ENV=test mocha tests/2_functional-tests.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "mongoose": "^7.0.3",
+    "axios": "^1.3.4",
+    "mocha": "^10.2.0",
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "helmet": "^7.0.0"
+  }
+}
